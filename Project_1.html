@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1,h2{
+text-align:center;
+font-family:Chalkduster,fantasy;
+
+}
+
+body,html{
+  height: 100%;
+  margin: 0;
+
+}
+
+.image1{
+background-image:url("template.JPG");
+background-repeat: no-repeat;
+background-position: center;
+background-size:cover;
+height:100%;
+position:relative;
+}
+
+.ani{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation-name:sling;
+ 
+  animation-duration:2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+   bottom: -300px;
+   right: 750px;
+ 
+}
+
+@keyframes sling {
+  0%{left:0 px}
+  25% {right:200px}
+  
+  
+  
+}
+
+
+
+.menuWrap {
+  min-height: 150px;
+  position: relative;
+  text-align: center;
+}
+.menu {
+  height: 10%;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menuButton {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #777;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.menuButton span {
+  line-height: 8px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.menuButton span:last-child {
+  padding-bottom: 5px;
+}
+.menuWrap {
+  position: relative;
+  height: 10%;
+  overflow: hidden;
+}
+.menuWrap input[type='checkbox'] {
+  width: 40px;
+  height: 40px;
+  outline: 3px solid red;
+  opacity: 0;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.menuWrap input:checked ~ .menuButton {
+  background: #e69900;
+}
+
+.menuWrap input:checked ~ .menuSelect {
+  transform: none;
+}
+
+.menuSelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 10%;
+  background-color: #006600;
+  z-index: 2;
+  transform: translateX(-310px);
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.menuLink {
+  padding: 5px 0 5px 5px;
+}
+
+.menuLink:hover {
+  background-color: #e69900;
+}
+
+.menuLink:first-of-type {
+  margin-top: 60px;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+<h1> 😄 SLINGSHOT FUN 😄 &nbsp;&nbsp;&nbsp;SCORE:00 PTS </h1>
+<h2>TIME:00:30</h2>
+<div class="menuWrap">
+  <div class="menu">
+    <div class="menuWrap">
+      <input type="checkbox" />
+      <div class="menuButton">
+        <span>&mdash;</span>
+        <span>&mdash;</span>
+        <span>&mdash;</span>
+      </div>
+      <div class="menuSelect">
+        <div class="menuLink"><a href="#image1">Resume</a></div>
+        <div class="menuLink"><a href="./Project_1.html">Restart</a></div>
+        <div class="menuLink"><a href="./Start-menu.html">Exit to Menu</a></div>
+      </div>
+    </div>
+  </div>
+  <p>Click the button for the menu!</p>
+</div>
+
+<div class="image1"></div>
+<div class="ani">
+<img src="ss.jpg.png" alt="Paris">
+</img>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
